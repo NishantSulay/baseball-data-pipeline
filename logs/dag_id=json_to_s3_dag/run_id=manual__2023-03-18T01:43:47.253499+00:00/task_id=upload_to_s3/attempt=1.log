@@ -1,0 +1,38 @@
+[2023-03-18T01:43:48.824+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-18T01:43:47.253499+00:00 [queued]>
+[2023-03-18T01:43:48.833+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-18T01:43:47.253499+00:00 [queued]>
+[2023-03-18T01:43:48.833+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-18T01:43:48.834+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-18T01:43:48.834+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-18T01:43:48.842+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): upload_to_s3> on 2023-03-18 01:43:47.253499+00:00
+[2023-03-18T01:43:48.847+0000] {standard_task_runner.py:55} INFO - Started process 1837 to run task
+[2023-03-18T01:43:48.853+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'json_to_s3_dag', 'upload_to_s3', 'manual__2023-03-18T01:43:47.253499+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/get_teams.py', '--cfg-path', '/tmp/tmpwm8jg0zm']
+[2023-03-18T01:43:48.855+0000] {standard_task_runner.py:83} INFO - Job 12: Subtask upload_to_s3
+[2023-03-18T01:43:48.928+0000] {task_command.py:388} INFO - Running <TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-18T01:43:47.253499+00:00 [running]> on host 14b30c1d0793
+[2023-03-18T01:43:48.982+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=json_to_s3_dag
+AIRFLOW_CTX_TASK_ID=upload_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-18T01:43:47.253499+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-18T01:43:47.253499+00:00
+[2023-03-18T01:43:49.178+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/get_teams.py", line 36, in upload_to_s3
+    s3_hook.load_string(response, key, bucket_name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 62, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 91, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 558, in load_string
+    bytes_data = string_data.encode(encoding)
+AttributeError: 'Response' object has no attribute 'encode'
+[2023-03-18T01:43:49.195+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=json_to_s3_dag, task_id=upload_to_s3, execution_date=20230318T014347, start_date=20230318T014348, end_date=20230318T014349
+[2023-03-18T01:43:49.206+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 12 for task upload_to_s3 ('Response' object has no attribute 'encode'; 1837)
+[2023-03-18T01:43:49.233+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-18T01:43:49.251+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

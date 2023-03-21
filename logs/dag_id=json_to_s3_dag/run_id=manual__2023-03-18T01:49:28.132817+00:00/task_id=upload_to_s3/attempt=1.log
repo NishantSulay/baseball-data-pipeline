@@ -1,0 +1,28 @@
+[2023-03-18T01:49:29.720+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-18T01:49:28.132817+00:00 [queued]>
+[2023-03-18T01:49:29.727+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-18T01:49:28.132817+00:00 [queued]>
+[2023-03-18T01:49:29.727+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-18T01:49:29.728+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-18T01:49:29.728+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-18T01:49:29.737+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): upload_to_s3> on 2023-03-18 01:49:28.132817+00:00
+[2023-03-18T01:49:29.742+0000] {standard_task_runner.py:55} INFO - Started process 1973 to run task
+[2023-03-18T01:49:29.745+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'json_to_s3_dag', 'upload_to_s3', 'manual__2023-03-18T01:49:28.132817+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/get_teams.py', '--cfg-path', '/tmp/tmpg9sia2x6']
+[2023-03-18T01:49:29.746+0000] {standard_task_runner.py:83} INFO - Job 14: Subtask upload_to_s3
+[2023-03-18T01:49:29.820+0000] {task_command.py:388} INFO - Running <TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-18T01:49:28.132817+00:00 [running]> on host 14b30c1d0793
+[2023-03-18T01:49:29.892+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=json_to_s3_dag
+AIRFLOW_CTX_TASK_ID=upload_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-18T01:49:28.132817+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-18T01:49:28.132817+00:00
+[2023-03-18T01:49:30.040+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-18T01:49:30.056+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-18T01:49:30.059+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-18T01:49:30.060+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-18T01:49:30.067+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-18T01:49:31.547+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-18T01:49:31.589+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=json_to_s3_dag, task_id=upload_to_s3, execution_date=20230318T014928, start_date=20230318T014929, end_date=20230318T014931
+[2023-03-18T01:49:31.684+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-18T01:49:31.716+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

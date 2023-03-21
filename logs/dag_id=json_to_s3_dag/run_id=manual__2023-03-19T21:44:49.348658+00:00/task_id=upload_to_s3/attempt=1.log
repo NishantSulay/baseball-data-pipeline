@@ -1,0 +1,178 @@
+[2023-03-19T21:44:51.756+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-19T21:44:49.348658+00:00 [queued]>
+[2023-03-19T21:44:51.763+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-19T21:44:49.348658+00:00 [queued]>
+[2023-03-19T21:44:51.764+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T21:44:51.764+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-19T21:44:51.764+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T21:44:51.773+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): upload_to_s3> on 2023-03-19 21:44:49.348658+00:00
+[2023-03-19T21:44:51.781+0000] {standard_task_runner.py:55} INFO - Started process 7054 to run task
+[2023-03-19T21:44:51.785+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'json_to_s3_dag', 'upload_to_s3', 'manual__2023-03-19T21:44:49.348658+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/get_teams.py', '--cfg-path', '/tmp/tmp02adh9zz']
+[2023-03-19T21:44:51.786+0000] {standard_task_runner.py:83} INFO - Job 15: Subtask upload_to_s3
+[2023-03-19T21:44:51.846+0000] {task_command.py:388} INFO - Running <TaskInstance: json_to_s3_dag.upload_to_s3 manual__2023-03-19T21:44:49.348658+00:00 [running]> on host 14b30c1d0793
+[2023-03-19T21:44:51.899+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=json_to_s3_dag
+AIRFLOW_CTX_TASK_ID=upload_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-19T21:44:49.348658+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-19T21:44:49.348658+00:00
+[2023-03-19T21:44:54.440+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:44:54.482+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:44:54.484+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:44:54.484+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:44:54.495+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:44:59.210+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:44:59.232+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:44:59.233+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:44:59.233+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:44:59.243+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:03.350+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:03.378+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:03.380+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:03.381+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:03.389+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:08.476+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:08.520+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:08.521+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:08.522+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:08.529+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:12.195+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:12.204+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:12.204+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:12.205+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:12.210+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:16.465+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:16.491+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:16.492+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:16.493+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:16.500+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:20.700+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:20.740+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:20.741+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:20.742+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:20.754+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:25.213+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:25.241+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:25.242+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:25.242+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:25.251+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:29.453+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:29.478+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:29.479+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:29.481+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:29.489+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:34.382+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:34.421+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:34.423+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:34.428+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:34.462+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:38.442+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:38.474+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:38.477+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:38.479+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:38.491+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:42.271+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:42.295+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:42.296+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:42.297+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:42.303+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:48.097+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:48.124+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:48.126+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:48.128+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:48.143+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:52.104+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:52.148+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:52.150+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:52.151+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:52.160+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:45:57.000+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:45:57.026+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:45:57.027+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:45:57.028+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:45:57.034+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:01.238+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:01.262+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:01.264+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:01.266+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:01.276+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:05.173+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:05.205+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:05.206+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:05.207+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:05.220+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:09.383+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:09.401+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:09.402+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:09.403+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:09.410+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:13.876+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:13.900+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:13.902+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:13.902+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:13.915+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:18.790+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:18.802+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:18.803+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:18.803+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:18.811+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:23.622+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:23.652+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:23.654+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:23.656+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:23.668+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:27.521+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:27.552+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:27.554+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:27.555+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:27.562+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:30.663+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:30.672+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:30.673+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:30.674+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:30.681+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:42.352+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:42.372+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:42.373+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:42.374+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:42.380+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:45.421+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:45.444+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:45.445+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:45.446+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:45.458+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:48.174+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:48.186+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:48.187+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:48.187+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:48.194+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:51.563+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:51.588+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:51.589+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:51.589+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:51.598+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:46:55.729+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:46:55.750+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:46:55.751+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:46:55.752+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:46:55.760+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:47:00.909+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:47:00.943+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:47:00.946+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:47:00.947+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:47:00.959+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:47:04.494+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:47:04.520+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:47:04.522+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:47:04.523+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:47:04.533+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:47:07.444+0000] {base_aws.py:400} INFO - Airflow Connection: aws_conn_id=aws_default
+[2023-03-19T21:47:07.471+0000] {base.py:73} INFO - Using connection ID 'aws_default' for task execution.
+[2023-03-19T21:47:07.472+0000] {base_aws.py:176} INFO - Credentials retrieved from login
+[2023-03-19T21:47:07.473+0000] {base_aws.py:92} INFO - Creating session with aws_access_key_id=AKIAQNPKB5MRBP2KQFF5 region_name=None
+[2023-03-19T21:47:07.481+0000] {base_aws.py:167} INFO - role_arn is None
+[2023-03-19T21:47:08.487+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-19T21:47:08.513+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=json_to_s3_dag, task_id=upload_to_s3, execution_date=20230319T214449, start_date=20230319T214451, end_date=20230319T214708
+[2023-03-19T21:47:08.622+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-19T21:47:08.653+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check
