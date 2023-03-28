@@ -1,7 +1,7 @@
 # Baseball Analytics
 ## A data pipeline for sabermetrics:
 
-- Baseball Savant
+- Baseball Savant/ Fangraphs/ MLB
 - Airflow
 - Python
 - Amazon S3
